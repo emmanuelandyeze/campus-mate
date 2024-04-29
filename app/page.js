@@ -1,16 +1,12 @@
+import Landing from '@/components/Landing';
+import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 
 export default function Home() {
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-center px-5 lg:px-0">
-			<Image src="/icon.png" width={200} height={200} />
-			<h1 className="text-4xl font-bold text-center">
-				Welcome to Campus Mate!
-			</h1>
-			<p className="text-center">
-				We are working tirelessly and would be with you
-				shortly.
-			</p>
+		<main className="min-h-screen  max-w-7xl mx-auto">
+			<Navbar />
+			<Landing />
 		</main>
 	);
 }
