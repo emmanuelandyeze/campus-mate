@@ -1,7 +1,20 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
+import {
+	Inter,
+	Open_Sans,
+	Poppins,
+} from 'next/font/google';
+import './globals.css';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
+const poppins = Poppins({
+	weight: '400',
+	subsets: ['latin'],
+});
+const opensans = Open_Sans({
+	weight: ['400', '700'],
+	style: ['normal', 'italic'],
+	subsets: ['latin'],
+});
 
 export const metadata = {
 	title:
@@ -11,8 +24,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en" className="bg-[#fefefe]">
-			<body className={inter.className}>{children}</body>
+		<html lang="en" className="bg-[#f1f1f1] text-[#1B1B1B]">
+			<body className={opensans.className}>{children}</body>
 		</html>
 	);
 }
